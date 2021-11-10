@@ -79,7 +79,7 @@ answer = input("Enter answer: ")
 if answer == q[1]:
     print("Correct")
 else:
-    print("Wrong")
+    print("Wrong" ",", q[1])
 
 """
 # late 20th century
