@@ -13,7 +13,7 @@ q10 = ("In 2004, this player broke the MLB record for hits in a season with 262"
 
 # late 20th century questions
 q11 = ("In 1970 who set the record for striking out 10 consecutive batters?", "Tom Seaver")
-q12 = ("In 1989, what player won the AL MVP without making the All Star team?", "Robin Yount")
+q12 = ("In 1989, this player won the AL MVP award dispite not making the all-star team", "Robin Yount")
 q13 = ("In 1995, this player became the first to reach 50 doubles and 50 home runs in the same season", "Albert Belle")
 q14 = ("Retiring in 1993, this player tied the record for most seasons played in the MLB with 27", "Nolan Ryan")
 q15 = ("This Major Leaguer played 22 season, retired in 1974, was inducted into the Hall of Fame in 1990, and is known as 'Mr. Tiger'", "Al Kaline")
