@@ -1,4 +1,6 @@
 import random
+import drivers
+from time import sleep
 # 21st Century Questions
 q1 = ("Who hit the most home runs in the 2010’s?", "Nelson Cruz")
 q2 = ("Who hit the most home runs in the 2000’s?", "Alex Rodriguz")
@@ -68,6 +70,8 @@ green = [q11,q12,q13,q14,q15,q16,q17,q18,q19,q20]
 red = [q21,q22,q23,q24,q25,q26,q27,q28,q29,q30]
 yellow = [q31,q32,q33,q34,q35,q36,q37,q38,q39,q40]
 eQuestions = [qw1,qw2,qw3,qw4,qw5,qw6,qw7,qw8,qw9,qw10]
+
+display = drivers.Lcd()
 #bballq = {"21st": aQuestions, "late20": bQuestions,"early20": cQuestions, "deadball": dQuestions, "WorldSeries": eQuestions}
 #color = {"21st": blue, "late20": green,"early20": red, "deadball": yellow}
 #key = list(color.keys())
@@ -77,12 +81,25 @@ button = input("Button: ")
 if button == "blue":
     print("Question: ")
     q = random.choice(blue)
+    display.lcd_display_string("Question: ",1)
+    sleep(2)
     print(q[0])
+    display.lcd_display_string(q[0],1)
+    sleep(10)
     answer = input("Enter answer: ")
     if answer == q[1]:
-        print("Correct")
+        print("Correct!")
+        display.lcd_clear()
+        display.lcd_display_string("Correct!",1)
+        sleep(2)
     else:
         print("Wrong" ",", q[1])
+        display.lcd_display_string("Wrong",1)
+        sleep(2)
+
+        display.lcd_clear()
+
+        sleep(2)
 
 elif button == "green":
     print("Question: ")
@@ -113,6 +130,8 @@ elif button == "yellow":
         print("Correct")
     else:
         print("Wrong" ",", q[1])
+
+
 
 
 
