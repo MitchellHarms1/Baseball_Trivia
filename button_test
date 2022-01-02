@@ -99,18 +99,21 @@ if btn_blue.is_pressed:
         print("Correct!")
         display.lcd_clear()
         display.lcd_display_string("Correct!",1)
-        sleep(2)
+        sleep(5)
     else:
         print("Wrong" ",", q[1])
         display.lcd_display_string("Wrong",1)
-        sleep(2)
+        sleep(5)
 
         display.lcd_clear()
 
-        sleep(2)
+        sleep(5)
+
 
 #btn_green.wait_for_press()
-elif btn_green.when_pressed == True:
+#elif btn_green.when_pressed == True:
+btn_green.wait_for_press()
+if btn_green.is_pressed:
     print("Question: ")
     q = random.choice(blue)
     display.lcd_display_string("Question: ",1)
